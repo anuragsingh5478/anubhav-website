@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Potta One", cursive;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+}
+
+.navigation {
+  height: 10vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5cdb95;
+  color: #edf5e1;
+
+  text-shadow: 2px 2px #379683;
+
+  font-size: 1.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navigation > .profile {
+  font-weight: bolder;
+  margin: 0px 20px;
+}
+
+.links > ul {
+  list-style: none;
+}
+
+.links > ul > li {
+  display: inline;
+  margin: 0px 15px;
+}
+
+.links > ul > li > a {
+  text-decoration: none;
+  color: #edf5e1;
+}
+
+.links > ul > li > a:hover {
+  color: #05386b;
+  text-shadow: 2px 2px #edf5e1;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-button {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.menu-button > div {
+  width: 40px;
+  height: 5px;
+  background-color: #edf5e1;
+  border-bottom: 2px solid #379683;
+}
+
+.home {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url("./images/background-pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-pic {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic > img {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 100%;
+  border: 5px solid white;
+}
+
+.about-me {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.about-me > p > .hi {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  margin: 0px 10px;
+}
+.mywork-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin: 5vh 0;
+  color: #05386b;
+  text-shadow: 2px 2px #5cdb95;
+}
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+.gallery > img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.gallery > img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  background-color: #5cdb95;
+  color: #edf5e1;
+
+  text-shadow: 2px 2px #379683;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-link > div > a {
+  text-decoration: none;
+  color: #edf5e1;
+  text-shadow: 2px 2px #379683;
+}
+.contact-link > div > a > img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 100vw;
+  }
+  .home {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .home > .profile-pic {
+    width: 100%;
+  }
+
+  .home > .about-me {
+    width: 100%;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .profile-pic > img {
+    width: 30vh;
+    height: 30vh;
+  }
+
+  .about-me {
+    font-size: 1rem;
+  }
+}
